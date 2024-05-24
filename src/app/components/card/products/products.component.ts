@@ -4,9 +4,9 @@ import { Component } from '@angular/core';
   selector: 'app-recipe',
   standalone: true,
   imports: [],
-  templateUrl: './recipe.component.html',
-  styleUrl: './recipe.component.css'
+  templateUrl: './products.component.html',
+  styleUrl: './products.component.css'
 })
-export class RecipeComponent {
+export class ProductsComponent {
 
 }
