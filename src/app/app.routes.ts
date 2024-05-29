@@ -8,6 +8,7 @@ import { MainComponent } from './pages/main/main.component';
 
 export const routes: Routes = [
     {path:"", component: MainComponent},
+    {path:"menu", component: MenuComponent},
     {path:"home", component: HomeComponent},
     {path:"receta1", component: Receta1Component},
     {path:"formulario", component: FormularioComponent},
