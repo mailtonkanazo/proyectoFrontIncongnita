@@ -1,0 +1,8 @@
+.background{
+    background-image: url('../../../../img/fondoIncognitasHomePage.jpg.jpg');
+    width: 100vw;
+    height: 90vh;
+    object-fit: cover;
+    background-repeat: no-repeat;
+
+}
