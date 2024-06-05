@@ -1,8 +1,18 @@
-.background{
-    background-image: url('../../../../img/fondoIncognitasHomePage.jpg.jpg');
-    width: 100vw;
-    height: 90vh;
-    object-fit: cover;
-    background-repeat: no-repeat;
+.background {
+  background-image: url("../../../../img/fondoVertigoRojo.jpg.jpg");
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
+.titul-inco {
+    color: white;
+    font-size: 200px;
+} 
+
+.img-logo {
+    z-index: 3;
+    width: 60px;
+    height: 60px;
 }

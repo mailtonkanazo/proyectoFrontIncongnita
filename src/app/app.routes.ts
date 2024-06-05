@@ -5,6 +5,7 @@ import { Receta1Component } from './pages/camisaNegraHombre/receta1.component';
 
 import { FormularioComponent } from './formulario/formulario.component';
 import { MainComponent } from './pages/main/main.component';
+import { MenuComponent } from './pages/menu/menu.component';
 
 export const routes: Routes = [
     {path:"", component: MainComponent},
