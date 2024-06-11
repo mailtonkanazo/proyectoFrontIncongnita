@@ -1,8 +1,30 @@
-.background{
-    background-image: url('../../../../img/fondoVertigoRojo.jpg.jpg');
-    width: 100vw;
-    height:100vh;
-    object-fit: cover;
-    background-repeat: no-repeat;
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Quicksand:wght@300..700&display=swap');
 
+.background {
+  background-image: url("../../../assets/img-main/fondoVertigoRojo.jpg.jpg");
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.titul-inco {
+  font-family: "Lora", serif;
+  color: white;
+  font-size: 100px;
+}
+
+.img-logo {
+  height: 100px;
+}
+
+.first{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
