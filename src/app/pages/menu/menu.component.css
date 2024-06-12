@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Quicksand:wght@300..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Footlight MT Light:ital,wght@0,400..700;1,400..700&family=Quicksand:wght@300..700&display=swap");
 
 .background {
   background-image: url("../../../assets/img-main/fondoVertigoRojo.jpg.jpg");
@@ -14,7 +14,7 @@
 }
 
 .titul-inco {
-  font-family: "Lora", serif;
+  font-family: "Footlight MT Light", serif;
   color: white;
   font-size: 100px;
 }
@@ -23,7 +23,7 @@
   height: 100px;
 }
 
-.first{
+.first {
   display: flex;
   justify-content: center;
   align-items: center;
