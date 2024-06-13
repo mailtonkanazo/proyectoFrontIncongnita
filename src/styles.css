@@ -32,9 +32,10 @@
   ==================== */
   
   #hero {
-    height: 350px;
-    background-image: url(https://images-ext-1.discordapp.net/external/TENYDTUP3acnJJ5YXeoj6qSWEHf3B1VjBnXR5wlYEEE/%3Fq%3D80%26w%3D2970%26auto%3Dformat%26fit%3Dcrop%26ixlib%3Drb-4.0.3%26ixid%3DM3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D/https/images.unsplash.com/photo-1552346154-21d32810aba3?format=webp&width=925&height=617);
+    height: 550px;
+    background-image: url("./assets/img-main/posterIncognitaMenus.jpg.jpg");
     background-size: cover;
+    background-position: center;
     background-position: center;
   }
   
