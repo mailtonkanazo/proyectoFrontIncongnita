@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Footlight MT Light:ital,wght@0,400..700;1,400..700&family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Footlight MT Light:ital,wght@0,400..700;1,400..700&family=Quicksand:wght@300..700&display=swap&family=arial");
 
 .background {
   background-image: url("../../../assets/img-main/fondoVertigoRojo.jpg.jpg");
@@ -9,7 +9,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: center;
+ 
   color: white;
 }
 
@@ -29,6 +29,8 @@
 
 .item{
   margin-right: 15px;
+  padding: 15px;
+  font-family:Arial, sans-serif ;
 }
 
 .titul-inco {
