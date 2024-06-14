@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Footlight MT Light:ital,wght@0,400..700;1,400..700&family=Quicksand:wght@300..700&display=swap&family=arial");
+@import url("https://fonts.googleapis.com/css2?family=Footlight MT Light:ital,wght@0,400..700;1,400..700&family=Quicksand:wght@300..700&display=swap&family=Times New Roman");
 
 .background {
   background-image: url("../../../assets/img-main/fondoVertigoRojo.jpg.jpg");
@@ -18,19 +18,22 @@
   flex-direction: row;
   justify-content: flex-end;
   width: 100vw;
-
+  text-align: left;
 }
 
 .list-item{
   list-style: none;
   display: flex;
   justify-content: flex-end;
+  
 }
 
 .item{
   margin-right: 15px;
   padding: 15px;
-  font-family:Arial, sans-serif ;
+  font-family:Times New Roman ;
+  
+  
 }
 
 .titul-inco {
@@ -45,6 +48,15 @@
 
 .first {
   display: flex;
-  justify-content: center;
+  justify-content:flex-end;
   align-items: center;
+  width: 100vw;
+  height: 5vh;
+  
+}
+
+.img-model{
+  width: 320px;
+ 
+
 }

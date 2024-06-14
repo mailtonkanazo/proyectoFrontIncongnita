@@ -7,8 +7,13 @@
     </ul>
   </article>
     <article class="botones">
-        <button class="btn-gender">Mujer</button>
-        <button class="btn-gender">Hombre</button>
+      <section class="images-menu">
+        <img class="img-model" *ngIf="modeloMujer" src="../../../assets/img-main/modeloMujerIncognita.png.png" alt="Camisa azul">
+        <img class="img-model" *ngIf="modeloHombre" src="../../../assets/img-main/modeloHombreIncognitaDos.png-removebg-preview.png" alt="Camisa roja">
+      
+        <button (click)="mostrarMujer()">MUJER</button>
+        <button (click)="mostrarHombre()">HOMBRE</button>
+      </section>
     </article>
 
     <article class="first">
