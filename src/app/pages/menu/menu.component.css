@@ -2,44 +2,45 @@
 
 .background {
   background-image: url("../../../assets/img-main/fondoVertigoRojo.jpg.jpg");
-  width: 100vw;
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   flex-direction: column;
- 
   color: white;
+  overflow-x: hidden;
 }
 
-.menu{
-  display:flex;
+.menu {
+  background-color: black;
+  display: flex;
   flex-direction: row;
   justify-content: flex-end;
   width: 100vw;
   text-align: left;
+  position: fixed;
+  color: white;
+  
 }
 
-.list-item{
+.list-item {
   list-style: none;
   display: flex;
   justify-content: flex-end;
-  
+  margin:0;
 }
 
-.item{
+.item {
   margin-right: 15px;
-  padding: 15px;
-  font-family:Times New Roman ;
-  
-  
+  padding: 10px;
+  font-family: Times New Roman;
 }
 
 .titul-inco {
   font-family: "Footlight MT Light", serif;
   color: white;
-  font-size: 100px;
+  font-size: 50px;
 }
 
 .img-logo {
@@ -48,15 +49,20 @@
 
 .first {
   display: flex;
-  justify-content:flex-end;
+  justify-content: flex-end;
   align-items: center;
   width: 100vw;
   height: 5vh;
-  
 }
 
-.img-model{
-  width: 320px;
- 
+.models-section {
+  width: 100vw;
+  height: 50vh;
+}
+.img-model-dama{
+  width: 280px;
+}
 
+.img-model-hombre{
+  width: 300px;
 }
