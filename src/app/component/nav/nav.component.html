@@ -1,9 +1,30 @@
 <nav
-  class="navbar navbar-light navbar-expand-md justify-content-center fixed-top bg-light"
+  class="navbar navbar-black navbar-expand-md justify-content-center fixed-top bg-black"
 >
   <div class="container-fluid">
-    <a href="#" class="navbar-brand d-flex w-50 mr-auto">
-      <strong>Home Menu</strong>
+    <a href="#" class="navbar-brand d-flex w-50 mr-auto text-white">
+      <div class="menu-container">
+        <div class="menu-icon" (click)="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <div class="menu-content" [ngClass]="{'show': menuVisible}">
+          <h1>INCO<span class="question-mark">?</span>NITA</h1>
+          <div class="menu-categories">
+            <span>Mujer</span>
+            <span>Hombre</span>
+          </div>
+          <div class="new-items">
+            <p>New:</p>
+            <ul>
+              <li>Camisas</li>
+              <li>Pantalones</li>
+              <li>Zapatos</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </a>
     <button
       class="navbar-toggler"
@@ -19,11 +40,11 @@
     <div class="navbar-collapse collapse w-100" id="mainNavBar">
       <ul class="navbar-nav w-100 justify-content-center">
         <li class="nav-item">
-          <a class="nav-link" href="#">Products</a>
+          <a class="nav-link text-white" href="#">Products</a>
         </li>
         <li class="nav-item dropdown">
           <a
-            class="nav-link dropdown-toggle"
+            class="nav-link dropdown-toggle text-white"
             href="#"
             role="button"
             data-bs-toggle="dropdown"
@@ -40,18 +61,18 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link text-white" href="#">About</a>
         </li>
       </ul>
       <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
         <li class="nav-item">
-          <a class="nav-link" href="#">Register</a>
+          <a class="nav-link text-white" href="#">Register</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Login</a>
+          <a class="nav-link text-white" href="#">Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"><i class="bi bi-bag"></i></a>
+          <a class="nav-link text-white" href="#"><i class="bi bi-bag"></i></a>
         </li>
       </ul>
     </div>
