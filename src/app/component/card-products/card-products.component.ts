@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-card-products',
@@ -9,5 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './card-products.component.css'
 })
 export class CardProductsComponent {
-
+@Input() titulo = "";
+@Input() imagen = "";
+@Input() precio = "";
 }

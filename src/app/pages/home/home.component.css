@@ -12,6 +12,13 @@
   color: red;
 }
 
+.row {
+  display: flex !important;
+  margin: auto !important;
+  flex-wrap: wrap !important;
+  justify-content: space-between !important; 
+} 
+
 /* ====================
   - Footer section
   ==================== */

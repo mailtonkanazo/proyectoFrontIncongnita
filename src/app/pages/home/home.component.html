@@ -63,25 +63,24 @@
         </p>
       </div>
       <div class="row">
+        @for(card of productCard(); track card) {
         <div class="col-12 col-sm-6 col-lg-3">
           <div class="product">
-            <figure>
-              <img src="../../../assets/img/camisaBlancaMLHombre.png" alt="" />
-              <figcaption>
-                <span class="featured">available</span>
-                <h3>Camisa Blanca Hombre M/L</h3>
-                <p>$ 50.00</p>
-              </figcaption>
-            </figure>
+            <app-card-products
+              [titulo]="card.titulo"
+              [imagen]="card.imagen"
+              [precio]="card.precio"
+            />
           </div>
         </div>
+        }
         <div class="col-12 col-sm-6 col-lg-3">
           <div class="product">
             <figure>
               <img src="../../../assets/img/camisaNegroMLHombre.png" alt="" />
               <figcaption>
                 <span class="featured">available</span>
-                <h3>Camisa Negra Hombre M/L</h3>
+                <h3>{{ productCard()[0].titulo }}</h3>
                 <p>$ 50.00</p>
               </figcaption>
             </figure>
