@@ -3,8 +3,28 @@
 >
   <div class="container-fluid">
     <a href="#" class="navbar-brand d-flex w-50 mr-auto text-white">
-      <strong class="text-white">Home Menu</strong>
-
+      <div class="menu-container">
+        <div class="menu-icon" (click)="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <div class="menu-content" [ngClass]="{'show': menuVisible}">
+          <h1>INCO<span class="question-mark">?</span>NITA</h1>
+          <div class="menu-categories">
+            <span>Mujer</span>
+            <span>Hombre</span>
+          </div>
+          <div class="new-items">
+            <p>New:</p>
+            <ul>
+              <li>Camisas</li>
+              <li>Pantalones</li>
+              <li>Zapatos</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </a>
     <button
       class="navbar-toggler"
