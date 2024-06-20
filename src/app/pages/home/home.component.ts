@@ -4,16 +4,37 @@ import { CardProductsComponent } from '../../component/card-products/card-produc
 import { FooterComponent } from '../../component/footer/footer.component';
 import { NavComponent } from '../../component/nav/nav.component';
 import { ProductListService } from '../../service/product-list.service';
+import { CartService } from '../../service/cart.service';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CardProductsComponent,FooterComponent, NavComponent],
+  imports: [CardProductsComponent, FooterComponent, NavComponent],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrl: './home.component.css',
 })
 export class HomeComponent {
   private productList = inject(ProductListService);
+  private cartService = inject(CartService);
 
   productCard = this.productList.productList;
+  productService: any;
+  products: any;
+  
+  ngOnInit() {
+    this.productService.list().subscribe({
+      next: (response: any) => {
+        this.products.set(response);
+      },
+      error: (error: any) => {
+        console.log(error);
+      },
+    });
+  }
+
+  addToCart(product: any) {
+    console.log('[Componente Home]', 'El producto para agregar es...');
+    console.log(product);
+    this.cartService.addToCart(product);
+  }
 }
