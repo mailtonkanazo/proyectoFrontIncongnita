@@ -21,14 +21,13 @@
   text-align: left;
   position: fixed;
   color: white;
-  
 }
 
 .list-item {
   list-style: none;
   display: flex;
   justify-content: flex-end;
-  margin:0;
+  margin: 0;
 }
 
 .item {
@@ -48,8 +47,9 @@
 }
 
 .first {
+  margin-left: 50px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   width: 100vw;
   height: 5vh;
@@ -60,10 +60,49 @@
   height: 50vh;
 }
 
-.img-model-dama{
-  width: 305px;
+.imagens-menu {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  width: 20%;
+
+}
+.imagens-menu img{
+  position: absolute;
+  right: 0;
 }
 
-.img-model-hombre{
-  width: 345px;
+.img-model-dama {
+  width: 520px;
+ 
+}
+
+.img-model-hombre {
+  width: 560px;
+  
+}
+
+.slide-left {
+  animation: slide-left 0.4s linear both;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100px);
+  }
+}
+
+.btn-model {
+  all: unset;
+  font-size: 20px;
+  font-family: "Footlight MT Light", serif;
+  color: white;
+  margin-left: 20px;
+}
+
+.btn-model:hover {
+  text-decoration: underline;
 }

@@ -1,10 +1,10 @@
-<app-nav/>
+<app-nav />
 
 <section class="background">
   <section class="models-section">
     <article class="botones">
-      <button (click)="mostrarMujer()">MUJER</button>
-      <button (click)="mostrarHombre()">HOMBRE</button>
+      <button class="btn-model" (click)="toggleModeloMujer()">MUJER</button>
+      <button class="btn-model" (click)="toggleModeloHombre()">HOMBRE</button>
     </article>
   </section>
 
@@ -12,12 +12,14 @@
     <img
       class="img-model-dama"
       *ngIf="modeloMujer"
+      [ngClass]="{'slide-left': modeloMujer}"
       src="../../../assets/img-main/modeloMujerIncognita.png.png"
       alt="Camisa azul"
     />
     <img
       class="img-model-hombre"
       *ngIf="modeloHombre"
+      [ngClass]="{'slide-left': modeloHombre}"
       src="../../../assets/img-main/modeloHombreIncognitaDos.png-removebg-preview.png"
       alt="Camisa roja"
     />
@@ -33,4 +35,5 @@
     <p class="titul-inco">NITA</p>
   </article>
 </section>
+
 <app-footer />

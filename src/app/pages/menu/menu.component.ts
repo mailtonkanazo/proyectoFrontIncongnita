@@ -14,13 +14,11 @@ export class MenuComponent {
   modeloMujer = false;
   modeloHombre = false;
 
-  mostrarMujer() {
-    this.modeloMujer = true;
-    this.modeloHombre = false;
+  toggleModeloMujer() {
+    this.modeloMujer = !this.modeloMujer;
   }
 
-  mostrarHombre() {
-    this.modeloMujer = false;
-    this.modeloHombre = true;
+  toggleModeloHombre() {
+    this.modeloHombre = !this.modeloHombre;
   }
 }
