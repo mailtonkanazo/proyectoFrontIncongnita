@@ -8,27 +8,27 @@ export class CartService {
 
   addToCart(product: any) {
     this.products.update((mapActual: any) => {
-      const productInCart = mapActual.get(product._id);
+      const productInCart = mapActual.get(product.titulo);
       if (productInCart !== undefined) {
         // El producto ya existe
-        mapActual.set(product._id, {
+        mapActual.set(product.titulo, {
           ...productInCart,
           quantity: productInCart.quantity + 1,
         });
       } else {
         // El producto no existe
-        mapActual.set(product._id, { ...product, quantity: 1 });
+        mapActual.set(product.titulo, { ...product, quantity: 1 });
       }
       console.log(mapActual);
       return new Map(mapActual);
     });
   }
 
-  incrementQuantity(productId: string) {
+  incrementQuantity(productTitulo: string) {
     this.products.update((mapActual) => {
-      const productInCart = mapActual.get(productId);
+      const productInCart = mapActual.get(productTitulo);
       if (productInCart !== undefined) {
-        mapActual.set(productId, {
+        mapActual.set(productTitulo, {
           ...productInCart,
           quantity: productInCart.quantity + 1,
         });
@@ -38,14 +38,14 @@ export class CartService {
     });
   }
 
-  decrementQuantity(productId: string) {
+  decrementQuantity(productTitulo: string) {
     this.products.update((mapActual) => {
-      const productInCart = mapActual.get(productId);
+      const productInCart = mapActual.get(productTitulo);
 
       if (productInCart.quantity === 1) {
-        mapActual.delete(productId);
+        mapActual.delete(productTitulo);
       } else {
-        mapActual.set(productId, {
+        mapActual.set(productTitulo, {
           ...productInCart,
           quantity: productInCart.quantity - 1,
         });

@@ -1,4 +1,4 @@
-import { NgClass } from '@angular/common';
+import { CurrencyPipe, NgClass } from '@angular/common';
 import { Component, inject, signal } from '@angular/core';
 import {RouterLinkWithHref } from '@angular/router';
 
@@ -8,8 +8,8 @@ import { CartProductsComponent } from '../cart-products/cart-products.component'
 @Component({
   selector: 'app-nav',
   standalone: true,
-  imports: [NgClass, CartProductsComponent, RouterLinkWithHref],
-  templateUrl: './nav.component.html'
+  imports: [NgClass, CartProductsComponent, RouterLinkWithHref, CurrencyPipe],
+  templateUrl: './nav.component.html',
   styleUrl: './nav.component.css'
 })
 export class NavComponent {

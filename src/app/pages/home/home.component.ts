@@ -20,21 +20,16 @@ export class HomeComponent {
   productCard = this.productList.productList;
   productService: any;
   products: any;
-  
+
   ngOnInit() {
     this.productService.list().subscribe({
       next: (response: any) => {
         this.products.set(response);
+        console.log(this.products);
       },
       error: (error: any) => {
         console.log(error);
       },
     });
-  }
-
-  addToCart(product: any) {
-    console.log('[Componente Home]', 'El producto para agregar es...');
-    console.log(product);
-    this.cartService.addToCart(product);
   }
 }
