@@ -1,0 +1,23 @@
+.min-h-screen {
+    flex: auto ;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+} 
+
+.login1{
+    background-color: white;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: black;
+    width: 10px;
+    max-width: max-content;
+}
+
+h1{
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
