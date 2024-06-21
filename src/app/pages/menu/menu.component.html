@@ -1,13 +1,39 @@
-<section class="background">
-    <article class="botones">
-        <button class="btn-gender">Mujer</button>
-        <button class="btn-gender">Hombre</button>
-    </article>
+<app-nav />
 
-    <article class="first">
-      <p class="titul-inco">INCO</p>
-      <img class="img-logo" src="../../../assets/img-main/logoSimboloIncognitaPNG.png" alt="logo" />
-      <p class="titul-inco">NITA</p>
+<section class="background">
+  <section class="models-section">
+    <article class="botones">
+      <button class="btn-model" (click)="toggleModeloMujer()">MUJER</button>
+      <button class="btn-model" (click)="toggleModeloHombre()">HOMBRE</button>
     </article>
+  </section>
+
+  <section class="images-menu">
+    <img
+      class="img-model-dama"
+      *ngIf="modeloMujer"
+      [ngClass]="{'slide-left': modeloMujer}"
+      src="../../../assets/img-main/modeloMujerIncognita.png.png"
+      alt="Camisa azul"
+    />
+    <img
+      class="img-model-hombre"
+      *ngIf="modeloHombre"
+      [ngClass]="{'slide-left': modeloHombre}"
+      src="../../../assets/img-main/modeloHombreIncognitaDos.png-removebg-preview.png"
+      alt="Camisa roja"
+    />
+  </section>
+
+  <article class="first">
+    <p class="titul-inco">INCO</p>
+    <img
+      class="img-logo"
+      src="../../../assets/img-main/logoSimboloIncognitaPNG.png"
+      alt="logo"
+    />
+    <p class="titul-inco">NITA</p>
+  </article>
 </section>
-<app-footer/>
+
+<app-footer />

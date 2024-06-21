@@ -1,0 +1,154 @@
+<nav
+  class="navbar navbar-black navbar-expand-md justify-content-center fixed-top bg-black"
+>
+  <div class="container-fluid">
+    <a href="#" class="navbar-brand d-flex w-50 mr-auto text-white">
+      <div class="menu-container">
+        <div class="menu-icon" (click)="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <div class="menu-content" [ngClass]="{ show: menuVisible }">
+          <h1>INCO<span class="question-mark">?</span>NITA</h1>
+          <!-- <div class="menu-categories">
+            <span>Mujer</span>
+            <span>Hombre</span>
+          </div>
+          <div class="new-items">
+            <p>New:</p>
+            <ul>
+              <li>Camisas</li>
+              <li>Pantalones</li>
+              <li>Zapatos</li>
+            </ul>
+          </div> -->
+        </div>
+      </div>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNavBar"
+      aria-controls="mainNavBar"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse w-100" id="mainNavBar">
+      <ul class="navbar-nav w-100 justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Products</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle text-white"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Categories
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">About</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#"><i class="bi bi-bag"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<nav
+  class="navbar navbar-black navbar-expand-md justify-content-center fixed-top bg-black"
+>
+  <div class="container-fluid">
+    <a href="#" class="navbar-brand d-flex w-50 mr-auto text-white">
+      <strong class="text-white">Home Menu</strong>
+
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNavBar"
+      aria-controls="mainNavBar"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse w-100" id="mainNavBar">
+      <ul class="navbar-nav w-100 justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Products</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle text-white"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Categories
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">About</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Login</a>
+        </li>
+        <li class="nav-item">
+          <a (click)="toggleShowCart()" class="nav-link text-white" ><i class="bi bi-bag"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<aside [ngClass]="showCart() ? 'cart show' : 'cart'">
+  <h2>Carrito ({{cartProducts().size}})</h2><button class="close" (click)="toggleShowCart()">Close</button>
+  <section class="cart-products">
+      @for(product of cartProducts().values(); track product._id) {
+      <app-cart-products [product]="product" />
+      }
+  </section>
+  <div class="details">
+      <h3>Total <span>{{ total() | currency }}</span></h3>
+      <a routerLink="/checkout" class="checkout">Checkout</a>
+  </div>
+</aside>
