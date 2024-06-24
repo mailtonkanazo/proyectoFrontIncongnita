@@ -63,19 +63,19 @@
         </p>
       </div>
       <div class="row">
-        @for(card of productCard(); track card) {
+        @for(card of products(); track card.id) {
         <div class="col-12 col-sm-6 col-lg-3">
           <div class="product">
             <app-card-products
-              [titulo]="card.titulo"
-              [imagen]="card.imagen"
-              [precio]="card.precio"
+              [titulo]="card.name"
+              [imagen]="card.image"
+              [precio]="card.price"
               [producto]="card"
             />
           </div>
         </div>
         }
-        <div class="col-12 col-sm-6 col-lg-3">
+        <!-- <div class="col-12 col-sm-6 col-lg-3">
           <div class="product">
             <figure>
               <img src="../../../assets/img/camisaNegroMLHombre.png" alt="" />
@@ -86,7 +86,7 @@
               </figcaption>
             </figure>
           </div>
-        </div>
+        </div> -->
         <div class="col-12 col-sm-6 col-lg-3">
           <div class="product">
             <figure>

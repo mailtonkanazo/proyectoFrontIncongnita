@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { CardProductsComponent } from '../../component/card-products/card-products.component';
 import { FooterComponent } from '../../component/footer/footer.component';
 import { NavComponent } from '../../component/nav/nav.component';
@@ -17,15 +17,17 @@ export class HomeComponent {
   private productList = inject(ProductListService);
   private cartService = inject(CartService);
 
-  productCard = this.productList.productList;
+  productCard = this.productList.getProducts;
   productService: any;
-  products: any;
+  
+  products = signal<any>([]);
 
   ngOnInit() {
-    this.productService.list().subscribe({
-      next: (response: any) => {
-        this.products.set(response);
-        console.log(this.products);
+    console.warn('[ngOnInit] El componente Home ha sido inicializado');
+    this.productList.getProducts().subscribe({
+      next: (products) => {
+        this.products.set(products);
+        console.log(products);
       },
       error: (error: any) => {
         console.log(error);
