@@ -1,6 +1,6 @@
 import { CurrencyPipe, NgClass } from '@angular/common';
 import { Component, inject, signal } from '@angular/core';
-import {RouterLinkWithHref } from '@angular/router';
+import { RouterLinkWithHref } from '@angular/router';
 
 import { CartService } from '../../service/cart.service';
 import { CartProductsComponent } from '../cart-products/cart-products.component';
@@ -10,17 +10,17 @@ import { CartProductsComponent } from '../cart-products/cart-products.component'
   standalone: true,
   imports: [NgClass, CartProductsComponent, RouterLinkWithHref, CurrencyPipe],
   templateUrl: './nav.component.html',
-  styleUrl: './nav.component.css'
+  styleUrl: './nav.component.css',
 })
 export class NavComponent {
-  private cartService= inject(CartService)
-  cartProducts= this.cartService.products;
- 
+  private cartService = inject(CartService);
+  cartProducts = this.cartService.products;
+  total = this.cartService.total;
   showCart = signal(false);
   toggleShowCart() {
-    this.showCart.update(value => !value)
+    this.showCart.update((value) => !value);
   }
-  menuVisible = false
+  menuVisible = false;
   toggleMenu() {
     this.menuVisible = !this.menuVisible;
   }

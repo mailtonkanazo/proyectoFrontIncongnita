@@ -7,7 +7,7 @@
         </figcaption>
     </figure>
     <div class="actions">
-        <button>Borrar</button>
+        <button (click)="deleteItem(product.titulo)">Borrar</button>
         <form action="">
         <button type="button" class="decrement" (click)="decrement(product.titulo)">-</button>
         <input type="number" name="quantity" id="quantity" [formControl]="productQuantity">

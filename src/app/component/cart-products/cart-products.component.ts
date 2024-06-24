@@ -30,4 +30,8 @@ private cartService= inject(CartService)
   decrement(productTitulo: string) {
     this.cartService.decrementQuantity(productTitulo);
   }
+
+  deleteItem(productTitulo: string) {
+    this.cartService.deleteItem(productTitulo)
+  }
 }
