@@ -66,49 +66,10 @@
         @for(product of products(); track product.id) {
         <div class="col-12 col-sm-6 col-lg-3">
           <div class="product">
-            <app-card-products
-            
-              [producto]="product"
-            />
+            <app-card-products [producto]="product" />
           </div>
         </div>
         }
-        <!-- <div class="col-12 col-sm-6 col-lg-3">
-          <div class="product">
-            <figure>
-              <img src="../../../assets/img/camisaNegroMLHombre.png" alt="" />
-              <figcaption>
-                <span class="featured">available</span>
-                <h3>{{ productCard()[0].titulo }}</h3>
-                <p>$ 50.00</p>
-              </figcaption>
-            </figure>
-          </div>
-        </div> -->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="product">
-            <figure>
-              <img src="../../../assets/img/camisaBeigeMLHombre.png" alt="" />
-              <figcaption>
-                <span class="featured">available</span>
-                <h3>Camisa Beis Hombre M/L</h3>
-                <p>$ 50.00</p>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="product">
-            <figure>
-              <img src="../../../assets/img/camisaBlancaMCHombre.png" alt="" />
-              <figcaption>
-                <span class="featured">available</span>
-                <h3>Camisa Blanca Hombre M/C</h3>
-                <p>$ 45.00</p>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
       </div>
     </div>
   </section>
