@@ -2,7 +2,6 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { CardLoginComponent } from '../../component/card-login/card-login.component';
-<<<<<<< HEAD
 import { Router } from '@angular/router';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { User } from '../../models/users.models'
