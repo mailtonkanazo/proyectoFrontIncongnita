@@ -15,10 +15,10 @@
 
 <span class="card" style="width: 18rem">
   <figure>
-    <img [src]="imagen" [alt]="titulo" />
+    <img [src]="producto?.image" [alt]="producto.name" />
     <div class="card-body">
-      <h3>{{ titulo }}</h3>
-      <p>$ {{ precio }}</p>
+      <h3>{{ producto.name }}</h3>
+      <p>$ {{ producto.price }}</p>
       <button href="#" class="btn btn-primary" (click)="addToCart(producto)">
         Añadir al carrito
       </button>

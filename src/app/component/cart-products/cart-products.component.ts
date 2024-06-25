@@ -23,15 +23,15 @@ private cartService= inject(CartService)
     }
   }
 
-  increment(productTitulo: string) {
-    this.cartService.incrementQuantity(productTitulo);
+  increment(productId: string) {
+    this.cartService.incrementQuantity(productId);
   }
 
-  decrement(productTitulo: string) {
-    this.cartService.decrementQuantity(productTitulo);
+  decrement(productId: string) {
+    this.cartService.decrementQuantity(productId);
   }
 
-  deleteItem(productTitulo: string) {
-    this.cartService.deleteItem(productTitulo)
+  deleteItem(productId: string) {
+    this.cartService.deleteItem(productId)
   }
 }

@@ -9,36 +9,36 @@ export class CartService {
     let mapActual = this.products();
     let totalParcial = 0;
 
-    for(let product of mapActual.values()) {
-      totalParcial += product.price * product.quantity
+    for (let product of mapActual.values()) {
+      totalParcial += product.price * product.quantity;
     }
 
-    return totalParcial
-  })
+    return totalParcial;
+  });
 
   addToCart(product: any) {
     this.products.update((mapActual: any) => {
-      const productInCart = mapActual.get(product.titulo);
+      const productInCart = mapActual.get(product._id);
       if (productInCart !== undefined) {
         // El producto ya existe
-        mapActual.set(product.titulo, {
+        mapActual.set(product._id, {
           ...productInCart,
           quantity: productInCart.quantity + 1,
         });
       } else {
         // El producto no existe
-        mapActual.set(product.titulo, { ...product, quantity: 1 });
+        mapActual.set(product._id, { ...product, quantity: 1 });
       }
       console.log(mapActual);
       return new Map(mapActual);
     });
   }
 
-  incrementQuantity(productTitulo: string) {
+  incrementQuantity(productId: string) {
     this.products.update((mapActual) => {
-      const productInCart = mapActual.get(productTitulo);
+      const productInCart = mapActual.get(productId);
       if (productInCart !== undefined) {
-        mapActual.set(productTitulo, {
+        mapActual.set(productId, {
           ...productInCart,
           quantity: productInCart.quantity + 1,
         });
@@ -48,14 +48,14 @@ export class CartService {
     });
   }
 
-  decrementQuantity(productTitulo: string) {
+  decrementQuantity(productId: string) {
     this.products.update((mapActual) => {
-      const productInCart = mapActual.get(productTitulo);
+      const productInCart = mapActual.get(productId);
 
       if (productInCart.quantity === 1) {
-        mapActual.delete(productTitulo);
+        mapActual.delete(productId);
       } else {
-        mapActual.set(productTitulo, {
+        mapActual.set(productId, {
           ...productInCart,
           quantity: productInCart.quantity - 1,
         });
@@ -65,11 +65,11 @@ export class CartService {
     });
   }
 
-  deleteItem(productTitulo: string) {
+  deleteItem(productId: string) {
     this.products.update((mapActual) => {
-      const productInCart = mapActual.get(productTitulo);
+      const productInCart = mapActual.get(productId);
       if (productInCart !== undefined) {
-        mapActual.delete(productTitulo);
+        mapActual.delete(productId);
       }
 
       return new Map(mapActual);
