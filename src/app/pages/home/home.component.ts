@@ -5,11 +5,12 @@ import { FooterComponent } from '../../component/footer/footer.component';
 import { NavComponent } from '../../component/nav/nav.component';
 import { ProductListService } from '../../service/product-list.service';
 import { CartService } from '../../service/cart.service';
+import { RouterLinkWithHref } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CardProductsComponent, FooterComponent, NavComponent],
+  imports: [CardProductsComponent, FooterComponent, NavComponent, RouterLinkWithHref],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })

@@ -15,13 +15,16 @@
 
 <span class="card" style="width: 18rem">
   <figure>
-    <img
-      [src]="'http://localhost:3000/uploads/' + producto.image"
-      [alt]="producto.name"
-    />
+    <a [routerLink]="['/item-description/', producto._id]">
+      <img
+        [src]="'http://localhost:3000/uploads/' + producto.image"
+        [alt]="producto.name"
+      />
+    </a>
     <div class="card-body">
       <h3>{{ producto.name }}</h3>
-      <p>$ {{ producto.price }}</p>
+      <p>{{ producto.price | currency }}</p>
+
       <button href="#" class="btn btn-primary" (click)="addToCart(producto)">
         Añadir al carrito
       </button>
