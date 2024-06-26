@@ -15,8 +15,10 @@ import { FormControl } from '@angular/forms';
 })
 export class ItemDescriptionComponent {
 
-  
-  producto: any;
+  private productService = inject(ProductListService);
+
+  products = signal<any>({});
+  @Input() id: String = '';
 
   @Input() product: any;
   private cartService = inject(CartService);
@@ -46,10 +48,6 @@ export class ItemDescriptionComponent {
     this.cartService.deleteItem(productId);
   }
 
-  private productService = inject(ProductListService);
-
-  products = signal<any>({});
-  @Input() id: String = '';
 
   ngOnInit() {
     console.warn('[ngOnInit] se ha inicializado el componente detail');

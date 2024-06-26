@@ -26,7 +26,7 @@
       </p>
       <div id="price">
         <h3>Precio: {{ products()?.price | currency }}</h3>
-        <button class="btn btn-primary" (click)="addToCart(producto)">
+        <button class="btn btn-primary" (click)="addToCart(products())">
           Añadir al carrito
         </button>
       </div>
