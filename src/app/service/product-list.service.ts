@@ -13,6 +13,9 @@ export class ProductListService {
     return this.http.get('http://localhost:3000/api/product');
   }
 
+  getProductsById(id: String) {
+    return this.http.get('http://localhost:3000/api/product/' + id);
+  }
 //   productList = signal([
 //     {
 //       imagen: 'https://picsum.photos/300/400?image=10',

@@ -1,14 +1,14 @@
 <app-nav />
 <main>
-  <h1>Camisas Dama.</h1>
+  <h1>{{ products()?.name }}</h1>
   <div id="item-general-view">
     <img
       width="400px"
-      src="../../../assets/img/camisaNegraMLMujer.png"
-      alt="imagen de prueba"
+      [src]="'http://localhost:3000/uploads/' + products()?.image"
+      [alt]="products()?.name"
     />
     <div id="item-details">
-      <h2>Camisa Negra Mujer M/L.</h2>
+      <h2>{{ products()?.description }}</h2>
       <div id="sizes">
         <h3>Tallas disponibles:</h3>
         <button type="button" class="btn btn-danger">S</button>
@@ -25,8 +25,8 @@
         camisa en tela de popelina fina elastica con botones manga larga negro.
       </p>
       <div id="price">
-        <h3>Precio: $50.00</h3>
-        <button class="btn btn-primary" (click)="addToCart(product)">
+        <h3>Precio: {{ products()?.price | currency }}</h3>
+        <button class="btn btn-primary" (click)="addToCart(producto)">
           Añadir al carrito
         </button>
       </div>

@@ -1,17 +1,21 @@
-import { Component, Input, SimpleChanges, inject } from '@angular/core';
+import { Component, Input, inject, signal, SimpleChanges} from '@angular/core';
 import { NavComponent } from '../../component/nav/nav.component';
 import { FooterComponent } from '../../component/footer/footer.component';
+import { ProductListService } from '../../service/product-list.service';
+import { CurrencyPipe } from '@angular/common';
 import { CartService } from '../../service/cart.service';
 import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-item-description',
   standalone: true,
-  imports: [NavComponent, FooterComponent],
+  imports: [NavComponent, FooterComponent, CurrencyPipe],
   templateUrl: './item-description.component.html',
   styleUrl: './item-description.component.css',
 })
 export class ItemDescriptionComponent {
+
+  
   producto: any;
 
   @Input() product: any;
@@ -41,4 +45,21 @@ export class ItemDescriptionComponent {
   deleteItem(productId: string) {
     this.cartService.deleteItem(productId);
   }
-}
+
+  private productService = inject(ProductListService);
+
+  products = signal<any>({});
+  @Input() id: String = '';
+
+  ngOnInit() {
+    console.warn('[ngOnInit] se ha inicializado el componente detail');
+    this.productService.getProductsById(this.id).subscribe({
+      next: (products) => {
+        console.log(products);
+        this.products.set(products);
+      },
+      error: (error) => {
+        console.error(error);
+      },
+    });
+  }}
