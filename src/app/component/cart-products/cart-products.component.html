@@ -18,11 +18,7 @@
         id="quantity"
         [formControl]="productQuantity"
       />
-      <button
-        type="button"
-        class="increment"
-        (click)="increment(product.titulo)"
-      >
+      <button type="button" class="increment" (click)="increment(product._id)">
         +
       </button>
     </form>
