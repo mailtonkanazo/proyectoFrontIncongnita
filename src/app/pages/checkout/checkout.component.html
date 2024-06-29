@@ -1,0 +1,69 @@
+<app-nav />
+<main>
+  <h1>Finaliza tu pedido:</h1>
+  <p>Ingresa la información de facturación, y tus datos de envío.</p>
+  <form action="" (submit)="onSubmit()" [formGroup]="shippingDetails">
+    <div class="mb-3">
+      <div class="formGroup">
+        <label for="name" class="form-label">Nombre completo:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          formControlName="name"
+        />
+      </div>
+    </div>
+    <div class="mb-3">
+      <div class="formGroup">
+        <label for="contactNumber" class="form-label"
+          >Teléfono de contacto:</label
+        >
+        <input
+          type="number"
+          class="form-control"
+          id="contactNumber"
+          formControlName="contactNumber"
+        />
+      </div>
+    </div>
+    <div class="mb-3">
+      <div class="formGroup">
+        <label for="address" class="form-label">Dirección de envío:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="address"
+          formControlName="address"
+        />
+      </div>
+    </div>
+    <div class="mb-3">
+      <div class="formGroup">
+        <label for="complement" class="form-label"
+          >Complemento (opcional):</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="complement"
+          formControlName="complement"
+        />
+      </div>
+    </div>
+    <div class="formGroup">
+      <label for="paymentMethod">Método de pago: </label>
+      <select
+        name="paymentMethod"
+        id="paymentMethod"
+        formControlName="paymentMethod"
+      >
+        <option value="cash">Efectivo</option>
+        <option value="bankTransfer">Transferencia bancaria</option>
+        <option value="pse">PSE</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar pedido</button>
+  </form>
+</main>
+<app-footer></app-footer>

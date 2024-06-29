@@ -1,9 +1,12 @@
-import { Injectable, computed, signal } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Token } from '@angular/compiler';
+import { Injectable, computed, inject, signal } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CartService {
+  private http = inject(HttpClient);
   products = signal(new Map());
   total = computed(() => {
     let mapActual = this.products();
@@ -76,5 +79,31 @@ export class CartService {
     });
   }
 
+  checkout(formData: any) {
+
+    const mapToArray = Array.from(this.products().values())
+    const newArrayOfProducts = mapToArray.map(function(products){
+      return {
+        productDetail: products._id, quantity: products.quantity
+      }
+    })
+
+    const body = {
+      token: localStorage.getItem("user_token"),
+      products: newArrayOfProducts,
+      total: this.total,
+      name: formData.name,
+      contactNumber: formData.contactNumber,
+      address: formData.address,
+      complement: formData.complement,
+      paymentMethod: formData.paymentMethod
+    }
+
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${localStorage.getItem("user_token")}`,
+      'Content-Type': 'application/json'
+  })
+    return this.http.post("http://localhost:3000/api/orders", body, {headers: headers})
+  }
   constructor() {}
 }

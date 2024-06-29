@@ -7,7 +7,7 @@ import { User, Token } from "../models/users.models"
   providedIn: 'root'
 })
 export class UserService {
-  apiUrl = "http://localhost:9000/api"
+  apiUrl = "http://localhost:3000/api"
 
   tokenName = "TOKEN"
 
@@ -18,7 +18,7 @@ export class UserService {
   })
 
   login(user: User):Observable<Token>{
-    return this.http.post<Token>(this.apiUrl+"/session/login", JSON.stringify(user),{ headers: this.headers })
+    return this.http.post<Token>(this.apiUrl+"/users/login", JSON.stringify(user),{ headers: this.headers })
   }
 
   register(user:User): Observable<User> {

@@ -85,7 +85,6 @@
   <div class="container-fluid">
     <a href="#" class="navbar-brand d-flex w-50 mr-auto text-white">
       <strong class="text-white">Home Menu</strong>
-
     </a>
     <button
       class="navbar-toggler"
@@ -133,7 +132,9 @@
           <a class="nav-link text-white" href="#">Login</a>
         </li>
         <li class="nav-item">
-          <a (click)="toggleShowCart()" class="nav-link text-white" ><i class="bi bi-bag"></i></a>
+          <a (click)="toggleShowCart()" class="nav-link text-white"
+            ><i class="bi bi-bag"></i
+          ></a>
         </li>
       </ul>
     </div>
@@ -141,14 +142,17 @@
 </nav>
 
 <aside [ngClass]="showCart() ? 'cart show' : 'cart'">
-  <h2>Carrito ({{cartProducts().size}})</h2><button class="close" (click)="toggleShowCart()">Close</button>
+  <h2>Carrito ({{ cartProducts().size }})</h2>
+  <button class="close" (click)="toggleShowCart()">Close</button>
   <section class="cart-products">
-      @for(product of cartProducts().values(); track product._id) {
-      <app-cart-products [product]="product" />
-      }
+    @for(product of cartProducts().values(); track product._id) {
+    <app-cart-products [product]="product" />
+    }
   </section>
   <div class="details">
-      <h3>Total <span>{{ total() | currency }}</span></h3>
-      <a routerLink="/checkout" class="checkout">Checkout</a>
+    <h3>
+      Total <span>{{ total() | currency }}</span>
+    </h3>
+    <a routerLink="/checkout/" class="checkout">Checkout</a>
   </div>
 </aside>
