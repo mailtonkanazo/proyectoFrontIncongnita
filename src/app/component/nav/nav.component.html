@@ -40,12 +40,11 @@
     <div class="navbar-collapse collapse w-100" id="mainNavBar">
       <ul class="navbar-nav w-100 justify-content-center">
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Products</a>
+          <a [routerLink]="'/home'"  class="nav-link text-white">Products</a>
         </li>
         <li class="nav-item dropdown">
           <a
-            class="nav-link dropdown-toggle text-white"
-            href="#"
+          [routerLink]="'/home'" class="nav-link dropdown-toggle text-white"
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
@@ -61,15 +60,18 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">About</a>
+          <a [routerLink]="'/about'"  class="nav-link text-white">About</a>
         </li>
       </ul>
       <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Register</a>
+          <a [routerLink]="'/register'"  class="nav-link text-white">Register</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Login</a>
+          <a [routerLink]="'/login'"  class="nav-link text-white">Login</a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="'/user'"  class="nav-link text-white">User</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="#"><i class="bi bi-bag"></i></a>
@@ -83,7 +85,7 @@
   class="navbar navbar-black navbar-expand-md justify-content-center fixed-top bg-black"
 >
   <div class="container-fluid">
-    <a href="#" class="navbar-brand d-flex w-50 mr-auto text-white">
+    <a (click)="cajaMenu()" (click)="closeModels()"  class="navbar-brand d-flex w-50 mr-auto text-white">
       <strong class="text-white">Home Menu</strong>
 
     </a>
@@ -101,12 +103,11 @@
     <div class="navbar-collapse collapse w-100" id="mainNavBar">
       <ul class="navbar-nav w-100 justify-content-center">
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Products</a>
+          <a [routerLink]="'/home'"  class="nav-link text-white">Products</a>
         </li>
         <li class="nav-item dropdown">
           <a
-            class="nav-link dropdown-toggle text-white"
-            href="#"
+          [routerLink]="'/home'"  class="nav-link dropdown-toggle text-white"
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
@@ -127,10 +128,13 @@
       </ul>
       <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Register</a>
+          <a [routerLink]="'/register'" class="nav-link text-white">Register</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Login</a>
+          <a [routerLink]="'/login'" class="nav-link text-white">Login</a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="'/user'" class="nav-link text-white">User</a>
         </li>
         <li class="nav-item">
           <a (click)="toggleShowCart()" class="nav-link text-white" ><i class="bi bi-bag"></i></a>
@@ -139,6 +143,35 @@
     </div>
   </div>
 </nav>
+<section class="caja-menu" *ngIf = "cajaMenuView">
+  <a class="modelos" (click)="toggleModeloMujer()">MUJER</a>
+  <a class="modelos" (click)="toggleModeloHombre()">HOMBRE</a>
+  <div class="categorias" *ngIf="modeloMujer || modeloHombre">
+    <a [routerLink]="'/home'" class="mujer">camisas</a>
+    <a [routerLink]="'/home'" class="mujer">pantalones</a>
+    <a [routerLink]="'/home'" class="mujer">calzado</a>
+  </div>
+  <!-- <div class="categorias">
+    <a class="hombre">camisas</a>
+    <a class="hombre">pantalones</a>
+    <a class="hombre">calzado</a>
+  </div> -->
+</section>
+
+  <img
+    class="img-model-dama"
+   
+    [ngClass]="modeloMujer ? 'slide-left': ''"
+    src="../../../assets/img-main/modeloMujerIncognita.png.png"
+    alt="Camisa azul"
+  />
+  <img
+    class="img-model-hombre"
+   
+    [ngClass]="modeloHombre ? 'slide-left': ''"
+    src="../../../assets/img-main/modeloHombreIncognitaDos.png-removebg-preview.png"
+    alt="Camisa roja"
+  />
 
 <aside [ngClass]="showCart() ? 'cart show' : 'cart'">
   <h2>Carrito ({{cartProducts().size}})</h2><button class="close" (click)="toggleShowCart()">Close</button>

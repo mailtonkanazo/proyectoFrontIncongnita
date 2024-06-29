@@ -13,7 +13,7 @@ import { FooterComponent } from '../../component/footer/footer.component';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CardLoginComponent, CommonModule, ReactiveFormsModule, FormsModule],
+  imports: [CardLoginComponent, CommonModule, ReactiveFormsModule, FormsModule, NavComponent, FooterComponent],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
