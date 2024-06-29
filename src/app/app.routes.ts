@@ -6,6 +6,7 @@ import { ItemDescriptionComponent } from './pages/item-description/item-descript
 import { LoginComponent } from './pages/login/login.component';
 import { UserComponent } from './pages/user/user.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 
 export const routes: Routes = [
@@ -15,5 +16,6 @@ export const routes: Routes = [
     {path:"menu", component: MenuComponent},
     {path:"home", component: HomeComponent},
     {path: "item-description/:id", component: ItemDescriptionComponent},
-    {path: "checkout", component: CheckoutComponent}
+    {path: "checkout", component: CheckoutComponent},
+    {path:"register", component: RegisterComponent}
 ];

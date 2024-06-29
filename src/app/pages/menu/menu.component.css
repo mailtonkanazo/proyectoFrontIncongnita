@@ -7,6 +7,7 @@
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
+
   flex-direction: column;
   color: white;
   overflow-x: hidden;
@@ -47,52 +48,16 @@
 }
 
 .first {
-  margin-left: 50px;
+  margin: 0 auto;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100vw;
-  height: 5vh;
+  margin-left: 200px;
+  margin-top: 450px;
+  scale: 1.5;
 }
 
 .models-section {
   width: 100vw;
   height: 50vh;
-}
-
-.imagens-menu {
-  display: flex;
-  justify-content: flex-end;
-  position: relative;
-  width: 20%;
-
-}
-.imagens-menu img{
-  position: absolute;
-  right: 0;
-}
-
-.img-model-dama {
-  width: 520px;
- 
-}
-
-.img-model-hombre {
-  width: 560px;
-  
-}
-
-.slide-left {
-  animation: slide-left 0.4s linear both;
-}
-
-@keyframes slide-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100px);
-  }
 }
 
 .btn-model {

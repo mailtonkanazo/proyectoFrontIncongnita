@@ -11,14 +11,5 @@ import { NavComponent } from '../../component/nav/nav.component';
   styleUrl: './menu.component.css'
 })
 export class MenuComponent {
-  modeloMujer = false;
-  modeloHombre = false;
-
-  toggleModeloMujer() {
-    this.modeloMujer = !this.modeloMujer;
-  }
-
-  toggleModeloHombre() {
-    this.modeloHombre = !this.modeloHombre;
-  }
+ 
 }
