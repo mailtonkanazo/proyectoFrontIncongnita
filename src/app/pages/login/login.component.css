@@ -1,26 +1,43 @@
-.min-h-screen {
-    flex: auto ;
-    align-items: center;
-    justify-content: center;
-    background-color: red;
-} 
-
-.login1{
-    background-color: white;
-    padding: 8px;
-    border-radius: 5px;
-    box-shadow: black;
-    width: 10px;
-    max-width: max-content;
-}
-
-h1{
-    text-align: center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    margin-bottom: 5px;
-    font-size: 20px;
+h1 {
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  margin-bottom: 5px;
+  font-size: 30px;
 }
 
 main {
-    margin-top: 110px;
+  background-color: rgb(196, 26, 26);
+  margin-top: 80px;
+}
+
+.inicia {
+  padding-top: 70px;
+}
+
+div {
+  background-color:rgb(194, 186, 186);
+  margin: 3% 30% 3% 30%;
+  border-radius: 10px;
+}
+
+.inform {
+  margin-top: 35px;
+  padding: 5% 20% 5% 20%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.name {
+  margin: 5px;
+}
+
+.password {
+  margin: 5px;
+}
+
+.boton-login {
+  background-color: aqua;
+  margin: 5px;
+  border-radius: 10px;
 }

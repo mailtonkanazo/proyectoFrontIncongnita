@@ -1,3 +1,14 @@
 main {
-    margin-top: 125px;
+    margin-top: 80px;
+    
+   
+    background-color:rgb(194, 186, 186);
 }
+
+.mb-3 {
+  
+    padding: 10px 500px 10px 500px;
+    justify-content: center;  
+};
+
+
