@@ -89,7 +89,7 @@ export class CartService {
     })
 
     const body = {
-      token: localStorage.getItem("user_token"),
+      token: localStorage.getItem("TOKEN"),
       products: newArrayOfProducts,
       total: this.total(),
       name: formData.name,
@@ -100,7 +100,7 @@ export class CartService {
     }
 
     const headers = new HttpHeaders({
-      'Authorization': `Bearer ${localStorage.getItem("user_token")}`,
+      'Authorization': `Bearer ${localStorage.getItem("TOKEN")}`,
       'Content-Type': 'application/json'
   })
     return this.http.post("http://localhost:3000/api/orders", body, {headers: headers})

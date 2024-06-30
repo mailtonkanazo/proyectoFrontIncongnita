@@ -20,7 +20,8 @@ import { FooterComponent } from '../../component/footer/footer.component';
 export class LoginComponent {
   loginForm:any;
 
-  constructor(private userService: UserService, private router:Router){
+  constructor(
+    private userService: UserService, private router:Router){
     this.loginForm = new FormGroup({
       email: new FormControl(),
       password: new FormControl()
@@ -39,6 +40,8 @@ export class LoginComponent {
 
     this.userService.login(user).subscribe({
       next:(token)=>{
+        console.log(token)
+        console.log("te has logeado")
         this.userService.saveToken(token)
         this.router.navigate(['/home'])
       },
