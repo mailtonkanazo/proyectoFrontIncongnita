@@ -43,4 +43,6 @@
     transform: translateX(14px);
   }
 
-  
+  main {
+    margin-top: 110px;
+  }

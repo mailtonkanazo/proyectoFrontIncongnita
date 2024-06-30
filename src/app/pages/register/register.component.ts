@@ -20,22 +20,26 @@ export class RegisterComponent {
   constructor(private userService:UserService, private router:Router){
     this.registerForm = new FormGroup({
       name: new FormControl(),
+      lastname: new FormControl(),
+      identification: new FormControl(),
       email: new FormControl(),
-      phone: new FormControl(),
+      movil: new FormControl(),
       password: new FormControl(),
-      password_confirmation: new FormControl(), 
     })
   }
-  async onSubmit(){
-    console.log(this.registerForm.value)
-    const res = await this.userService.register(this.registerForm.value).subscribe(
-      response=> {
-        console.log(response)
-      },
-      error => {
-        console.log(error)
-      }
-    )
-    console.log(res)
+  onSubmit(event: Event) {
+    if (this.registerForm.valid) {
+      console.log("Podemos enviar la información")
+      this.userService.register(this.registerForm.value).subscribe({
+        next: response => {
+          this.router.navigate(["/login"])
+        },
+        error: error => {
+          console.log(error)
+        }
+      })
+    } else {
+      console.log("Campos no válidos")
+    }
   }
 }

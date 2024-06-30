@@ -91,7 +91,7 @@ export class CartService {
     const body = {
       token: localStorage.getItem("user_token"),
       products: newArrayOfProducts,
-      total: this.total,
+      total: this.total(),
       name: formData.name,
       contactNumber: formData.contactNumber,
       address: formData.address,

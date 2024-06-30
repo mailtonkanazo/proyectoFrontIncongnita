@@ -22,7 +22,7 @@ export class UserService {
   }
 
   register(user:User): Observable<User> {
-    return this.http.post<User>(this.apiUrl+"/session/register", user,{ headers: this.headers }) 
+    return this.http.post<User>(this.apiUrl+"/users", user,{ headers: this.headers }) 
   }
 
   isLogged():boolean{

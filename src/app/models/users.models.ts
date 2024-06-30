@@ -1,10 +1,10 @@
 export interface User {
   name?: string;
   lastname?: string;
-  age?: number;
+  identification?: number;
   email: string;
   password: string;
-  role?: string;
+  movil?: string;
 }
 
 export interface Token {
