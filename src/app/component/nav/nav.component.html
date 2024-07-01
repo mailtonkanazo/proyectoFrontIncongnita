@@ -161,14 +161,14 @@
 
   <img
     class="img-model-dama"
-   
+    *ngIf="modeloMujer"
     [ngClass]="modeloMujer ? 'slide-left': ''"
     src="../../../assets/img-main/modeloMujerIncognita.png.png"
     alt="Camisa azul"
   />
   <img
     class="img-model-hombre"
-   
+   *ngIf="modeloHombre"
     [ngClass]="modeloHombre ? 'slide-left': ''"
     src="../../../assets/img-main/modeloHombreIncognitaDos.png-removebg-preview.png"
     alt="Camisa roja"

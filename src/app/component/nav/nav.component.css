@@ -56,6 +56,9 @@ aside .details h3 {
   justify-content: space-between;
   margin-top: 2rem;
 }
+.container-fluid strong{
+  cursor: pointer;
+}
 
 .caja-menu,
 .categorias {
@@ -74,6 +77,8 @@ aside .details h3 {
   color: black;
   text-decoration: none;
   margin-left: 150px;
+  border: 2px solid black;
+  cursor: pointer;
 }
 
 .imagens-menu {
@@ -123,6 +128,7 @@ aside .details h3 {
   padding-left: 30px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   margin-left: 150px;
+  border-top: none;
 }
 strong {
   margin-left: 150px;
