@@ -1,126 +1,130 @@
- aside.cart {
-    width: 30vw;
-    height: 100vh;
-    min-width: 350px;
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    right: 0;
-    top: 0;
-    transform: translateX(110%);
-    transition: transform 0.4s ease-in-out;
-    background-color: white;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-    z-index: 2000;
+aside.cart {
+  width: 30vw;
+  height: 100vh;
+  min-width: 350px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  right: 0;
+  top: 0;
+  transform: translateX(110%);
+  transition: transform 0.4s ease-in-out;
+  background-color: white;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  z-index: 2000;
 }
- 
+
 aside.cart.show {
-    transform: translateX(0);
+  transform: translateX(0);
 }
 
 aside .close {
-    position: absolute;
-    right: 20px;
-    top: 23px;
-    background: none;
-    border: none;
+  position: absolute;
+  right: 20px;
+  top: 23px;
+  background: none;
+  border: none;
 }
 
 aside a.checkout {
-    width: 100%;
-    display: inline-block;
-    background: #1c64f2;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    padding: 12px;
-    margin-top: 2rem;
-    text-align: center;
-    text-decoration: none;
+  width: 100%;
+  display: inline-block;
+  background: #1c64f2;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 12px;
+  margin-top: 2rem;
+  text-align: center;
+  text-decoration: none;
 }
 
 section.cart-products {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    flex-grow: 1;
-    margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-grow: 1;
+  margin-top: 2rem;
 }
 
-aside .details {}
+aside .details {
+}
 
 aside .details h3 {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
 }
 
-.caja-menu, .categorias {
-    background-color: white;
-    padding: 10px;
-    display: flex;
-    gap: 10px;
-    position: fixed;
-    top: 80px;
-    z-index: 10000;
-    left: 20px;
-    width: 10%;
-    min-width: 126.2px;
-    justify-content: center;
-    font-family: 'Times New Roman', Times, serif;
-    color:black;
-    text-decoration: none;
+.caja-menu,
+.categorias {
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  position: fixed;
+  top: 80px;
+  z-index: 10000;
+  left: 20px;
+  width: 10%;
+  min-width: 126.2px;
+  justify-content: center;
+  font-family: "Times New Roman", Times, serif;
+  color: black;
+  text-decoration: none;
+  margin-left: 150px;
 }
 
 .imagens-menu {
-    display: flex;
-    justify-content: flex-end;
-    position: relative;
-    width: 20%;
-  
-  }
-  
-  
-  .img-model-dama {
-    width: 520px;
-   opacity: 0;
-   position: absolute;
-   right: 0;
-   transform: translateX(-100%);
-   top: 80px;
-  }
-  
-  .img-model-hombre {
-    width: 560px;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  width: 20%;
+}
+
+.img-model-dama {
+  width: 520px;
   opacity: 0;
   position: absolute;
   right: 0;
   transform: translateX(-100%);
   top: 80px;
-  }
-  
-  .slide-left {
-    animation: slide-left 0.4s linear both;
-  }
-  
-  @keyframes slide-left {
-    0% {
-      transform: translateX(0);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(-100px);
-      opacity: 1;
-    }
-  }
+}
 
-  .categorias {
-    top: 120px;
-    width: 126.9;
-    flex-direction: column;
-   padding-left: 40px;
-   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.img-model-hombre {
+  width: 560px;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  transform: translateX(-100%);
+  top: 80px;
+}
 
+.slide-left {
+  animation: slide-left 0.4s linear both;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
   }
-  
+  100% {
+    transform: translateX(-100px);
+    opacity: 1;
+  }
+}
+
+.categorias {
+  top: 120px;
+  width: 126.9;
+  flex-direction: column;
+  padding-left: 30px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-left: 150px;
+}
+strong {
+  margin-left: 150px;
+  margin-top: 10px;
+}
