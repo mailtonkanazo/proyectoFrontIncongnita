@@ -2,7 +2,8 @@
   <figure>
     <img [src]="'http://localhost:3000/uploads/' + product.image" alt="" />
     <figcaption>
-      <p>{{ product.name }}</p>
+      <p>{{ product.name }} {{ product.color }}</p>
+      <p>{{ product.description }}</p>
       <p>{{ product.price | currency }}</p>
     </figcaption>
   </figure>

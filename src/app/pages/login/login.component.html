@@ -1,12 +1,24 @@
 <app-nav />
 <main>
-  <h1 class="inicia" >Inicia sesión</h1>
-<div>
-  <form class="inform" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-    <input class="name" type="text" formControlName="email" placeholder="Username" />
-    <input class="password" type="password" formControlName="password" placeholder="Password" />
-    <button class="boton-login" type="submit" [disabled]="!loginForm.valid">Login</button>
-  </form>
-</div>
+  <h1 class="inicia">Inicia sesión</h1>
+  <div>
+    <form class="inform" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <input
+        class="name"
+        type="text"
+        formControlName="email"
+        placeholder="Correo electrónico"
+      />
+      <input
+        class="password"
+        type="password"
+        formControlName="password"
+        placeholder="Contraseña"
+      />
+      <button class="boton-login" type="submit" [disabled]="!loginForm.valid">
+        Login
+      </button>
+    </form>
+  </div>
 </main>
 <app-footer />

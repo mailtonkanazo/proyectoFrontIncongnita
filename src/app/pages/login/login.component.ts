@@ -43,6 +43,7 @@ export class LoginComponent {
         console.log(token)
         console.log("te has logeado")
         this.userService.saveToken(token)
+        alert("Has iniciado sesión")
         this.router.navigate(['/home'])
       },
       error:(error) =>{

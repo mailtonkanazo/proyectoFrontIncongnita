@@ -3,6 +3,7 @@ import { NavComponent } from '../../component/nav/nav.component';
 import { FooterComponent } from '../../component/footer/footer.component';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { CartService } from '../../service/cart.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-checkout',
@@ -14,6 +15,7 @@ import { CartService } from '../../service/cart.service';
 export class CheckoutComponent {
 
 private CartService = inject(CartService);
+private router = inject(Router);
 cartProducts = this.CartService.products;
 
   shippingDetails = new FormGroup({
@@ -25,14 +27,15 @@ cartProducts = this.CartService.products;
   })
 
   onSubmit() {
-    if(this.shippingDetails.valid && this.cartProducts().size >= 1){
+    if (this.shippingDetails.valid && this.cartProducts().size >= 1) {
       this.CartService.checkout(this.shippingDetails.value)
-      .subscribe({
-        next: () => console.log("pedido hecho, gracias")
-      })
+        .subscribe({
+          next: () => {
+            alert("Gracias por tu compra y por preferirnos, ¡que lo disfrutes!");
+            this.router.navigate(['/home']);
+          }
+        });
+    } else {
+      alert("No has añadido ningún producto");
     }
-    else{
-      console.log("no hay suficientes productos")
-    }
-  }
-}
+  }}
