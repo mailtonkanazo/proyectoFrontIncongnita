@@ -41,9 +41,7 @@ export class LoginComponent {
     this.userService.login(user).subscribe({
       next:(token)=>{
         console.log(token)
-        console.log("te has logeado")
         this.userService.saveToken(token)
-        alert("Has iniciado sesión")
         this.router.navigate(['/home'])
       },
       error:(error) =>{
