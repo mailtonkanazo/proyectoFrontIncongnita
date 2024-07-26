@@ -10,11 +10,11 @@ export class ProductListService {
   constructor() { }
 
   getProducts() {
-    return this.http.get('http://localhost:3000/api/product');
+    return this.http.get('http://3.19.57.90:3000/api/product');
   }
 
   getProductsById(id: String) {
-    return this.http.get('http://localhost:3000/api/product/' + id);
+    return this.http.get('http://3.19.57.90:3000/api/product/' + id);
   }
 //   productList = signal([
 //     {
