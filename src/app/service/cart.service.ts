@@ -103,7 +103,7 @@ export class CartService {
       'Authorization': `Bearer ${localStorage.getItem("TOKEN")}`,
       'Content-Type': 'application/json'
   })
-    return this.http.post("http://3.19.57.90:3000/api/orders", body, {headers: headers})
+    return this.http.post("http://3.128.18.200:3000/api/orders", body, {headers: headers})
   }
   constructor() {}
 }

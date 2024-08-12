@@ -7,7 +7,7 @@ import { User, Token } from "../models/users.models"
   providedIn: 'root'
 })
 export class UserService {
-  apiUrl = "http://3.19.57.90:3000/api"
+  apiUrl = "http://3.128.18.200:3000/api"
 
   tokenName = "TOKEN"
 
